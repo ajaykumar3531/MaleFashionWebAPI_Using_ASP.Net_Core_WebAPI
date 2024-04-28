@@ -11,19 +11,19 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public string FirstName { get; set; } = null!;
+    public string? FirstName { get; set; }
 
-    public string LastName { get; set; } = null!;
+    public string? LastName { get; set; }
 
-    public string MiddleName { get; set; } = null!;
+    public string? MiddleName { get; set; }
 
-    public byte[] AddressId { get; set; } = null!;
+    public byte[]? AddressId { get; set; }
 
-    public DateTime? CreatedDate { get; set; }
+    public DateTime CreatedDate { get; set; }
 
-    public string Dob { get; set; } = null!;
+    public string? Dob { get; set; }
 
-    public short Gender { get; set; }
+    public short? Gender { get; set; }
 
     public string PhoneNumber { get; set; } = null!;
 
@@ -31,9 +31,9 @@ public partial class User
 
     public short? Status { get; set; }
 
-    public string ImageUrl { get; set; } = null!;
+    public string? ImageUrl { get; set; }
 
-    public virtual Address Address { get; set; } = null!;
+    public virtual Address? Address { get; set; }
 
     public virtual ICollection<Cart> Carts { get; } = new List<Cart>();
 

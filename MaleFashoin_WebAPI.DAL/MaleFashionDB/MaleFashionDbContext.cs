@@ -385,7 +385,6 @@ public partial class MaleFashionDbContext : DbContext
 
             entity.HasOne(d => d.Address).WithMany(p => p.Users)
                 .HasForeignKey(d => d.AddressId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Users__AddressID__3B75D760");
 
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
